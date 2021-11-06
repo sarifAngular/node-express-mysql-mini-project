@@ -1,0 +1,6 @@
+initilize package manager
+>npm init
+install these packages 
+> npm install express body-parser handlebars nodemon mysql
+make a file ex. server.js
+> 
