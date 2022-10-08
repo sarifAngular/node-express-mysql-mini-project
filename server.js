@@ -4,7 +4,10 @@ const bodyParser = require("body-parser");
 const mysql = require("mysql");
 const path = require("path");
 // importing local javascript files
+
+// importing  route files 
 const PeopleRoutes = require("./routes/people");
+//importing mysqlconnection file
 const mysqlConnection= require("./connect");
 
 //creating  express application 
@@ -27,19 +30,6 @@ app.use(express.static(path.join(__dirname,"public")));
 
 
 
-
-// it takes a callback function
-mysqlConnection.connect((err)=>{
-    if(!err)
-    {
-        console.log("Connection Successful");
-    }
-    else
-    {
-        console.log("Connection failed  " +err);
-    }
-}
-);
 //Now run the server.js file 
 //it will be print  an err to the console
 
